@@ -17795,6 +17795,9 @@ div.u-video,
   content: "\2715";
   font-size: 28px !important;
 }
+.u-menu-close:hover {
+  color: #478ac9;
+}
 .u-enable-responsive.u-offcanvas .u-sidenav {
   height: 100vh;
   height: -webkit-fill-available;
@@ -36530,7 +36533,45 @@ a.u-link.u-text-hover-grey-90:hover {
   src: url(StarTrebek-7BEmw.ttf);
 }
 
+.madeby::before,
+.madeby::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --madeby-color: #08ff98;
+  color: #000;
 
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 350ms transform;
+  transform-origin: bottom center;
+}
+
+.madeby::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-madeby);
+  color: white;
+  padding: .5rem;
+  border-radius: 1rem;
+  text-align: center;
+  background: var(--madeby-color);
+}
+
+.madeby:hover::before,
+.madeby:hover::after {
+  --scale: 1;
+}
+
+.madeby::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--madeby-color);
+  transform-origin: top center;
+}
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
