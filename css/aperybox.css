@@ -5618,12 +5618,11 @@ a {
   box-sizing: border-box;
 }
 html {
-  height: 100%;
+  min-height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
 }
 body {
-  height: auto;
   min-height: 100%;
 }
 body,
@@ -5632,7 +5631,7 @@ aside,
 section,
 header,
 footer {
-  position: relative;
+  position: static;
 }
 section > *,
 header > *,
@@ -25524,7 +25523,7 @@ a.u-link.u-hover-grey-light-3:hover {
 .u-container-style.u-white:before,
 .u-container-layout.u-white:before,
 .u-table-alt-white tr:nth-child(even) {
-  color: #111111;
+  color: #fff;
   background-color: #ffffff;
 }
 .u-button-style.u-white,
@@ -25570,6 +25569,9 @@ li.active > a.u-button-style.u-button-style.u-active-white[class*="u-border-"] {
 }
 a.u-link.u-hover-white:hover {
   color: #ffffff !important;
+}
+.u-white-nobg {
+  color:#ffffff !important
 }
 .u-black,
 .u-body.u-black,
@@ -35933,6 +35935,9 @@ a.u-link.u-text-hover-grey-90:hover {
             color: #1b1b1b !important;
         }
         
+        .u-text-custom-color-3, .u-text-custom-color-3:hover {
+          color:#fff
+        }
         
         .u-text-custom-color-5,
         a.u-button-style.u-text-custom-color-5,
